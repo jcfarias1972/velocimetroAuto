@@ -26,16 +26,16 @@ enum Velocidades:Int {
         }
     }
     
-    init(){
-        self = .Apagado     //Valor inicial APAGADO
+    init(velocidadInicial: Velocidades){
+        self = velocidadInicial
     }
 }
 
 class Auto {
-    var velocidad = Velocidades()
+    var velocidad = Velocidades(velocidadInicial: .Apagado)
     
-    init (){
-        print("Se instanció Auto(): By JCFA ")
+    init(){
+    self.velocidad = Velocidades(velocidadInicial: .Apagado )
     }
 }
 
